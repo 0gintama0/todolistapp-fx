@@ -8,5 +8,14 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
+        SQL: TRACE
         show_sql: true
         format_sql: true
+        use_sql_comments: true
+
+logging:
+  level:
+    org:
+     hibernate:
+       SQL: TRACE
+       type: TRACE
