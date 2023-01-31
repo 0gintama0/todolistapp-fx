@@ -37,6 +37,8 @@
         <lombok.version>1.18.24</lombok.version>
         <version.mapstruct-lombok>0.2.0</version.mapstruct-lombok>
         <junit.version>4.11</junit.version>
+        <start-class>dev.jeici.TodoApplication</start-class>
+        <javafx.version>15.0.1</javafx.version>
     </properties>
 
     <dependencyManagement>

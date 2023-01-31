@@ -6,9 +6,11 @@ import dev.jeici.presentation.enumeration.FxmlViewEnum;
 import dev.jeici.presentation.state.StageManager;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public
@@ -57,6 +59,8 @@ class TodoApplication
 		String[] args = getParameters().getRaw().toArray(new String[0]);
 		return builder.run(args);
 	}
+
+
 
 
 }
