@@ -28,10 +28,11 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version.source>8</java.version.source>
-        <java.version.target>8</java.version.target>
-        <maven.compiler.testTarget>8</maven.compiler.testTarget>
-        <maven.compiler.testSource>8</maven.compiler.testSource>
+        <java.version>8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.testTarget>${java.version}</maven.compiler.testTarget>
+        <maven.compiler.testSource>${java.version}</maven.compiler.testSource>
         <org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
         <lombok.version>1.18.24</lombok.version>
         <version.mapstruct-lombok>0.2.0</version.mapstruct-lombok>
@@ -89,8 +90,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.1</version>
                     <configuration>
-                        <source>${java.version.source}</source>
-                        <target>${java.version.target}</target>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
                         <annotationProcessorPaths>
                             <path>
                                 <groupId>org.mapstruct</groupId>
@@ -114,8 +115,8 @@
                             <id>default-compile</id>
                             <configuration>
                                 <compilerArguments>
-                                    <source>${java.version.target}</source>
-                                    <target>${java.version.source}</target>
+                                    <source>${java.version}</source>
+                                    <target>${java.version}</target>
                                 </compilerArguments>
                             </configuration>
                         </execution>

@@ -13,12 +13,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>${java.version.source}</maven.compiler.source>
-        <maven.compiler.target>${java.version.target}</maven.compiler.target>
-    </properties>
-
     <dependencies>
         <!-- Test dependencies inherit-->
         <dependency>
