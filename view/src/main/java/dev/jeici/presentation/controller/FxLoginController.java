@@ -47,7 +47,6 @@ class FxLoginController
 	{
 		if (userService.authenticate(getUsername(), getPassword()))
 		{
-
 			stageManager.switchScene(FxmlViewEnum.USER);
 		}
 		else
@@ -76,25 +75,3 @@ class FxLoginController
 	}
 }
 
-//	public static
-//	void loadView(Stage stage)
-//	{
-//		initialize(stage);
-//	}
-//
-//	@FXML
-//	private static
-//	void initialize(Stage stage)
-//	{
-//		try
-//		{
-//			Parent view = FXMLLoader.load(Objects.requireNonNull(FxLoginController.class.getResource("/fxmls/Login.fxml")));
-//			stage.setScene(new Scene(view));
-//			stage.show();
-//		}
-//		catch (IOException e)
-//		{
-//			e.printStackTrace();
-//		}
-//	}
-//}

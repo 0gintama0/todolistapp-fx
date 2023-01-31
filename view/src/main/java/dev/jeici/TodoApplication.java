@@ -1,16 +1,13 @@
 package dev.jeici;
 
-
-
 import dev.jeici.presentation.enumeration.FxmlViewEnum;
 import dev.jeici.presentation.state.StageManager;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.springframework.boot.CommandLineRunner;
+import javafx.stage.StageStyle;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public
@@ -21,25 +18,31 @@ class TodoApplication
 	protected ConfigurableApplicationContext springContext;
 	protected StageManager                   stageManager;
 
-	public static void main(final String[] args) {
+	public static
+	void main(final String[] args)
+	{
 		Application.launch(args);
 	}
 
 	@Override
-	public void init()
+	public
+	void init()
 	{
 		springContext = springBootApplicationContext();
 	}
 
 	@Override
-	public void start(Stage stage)
+	public
+	void start(Stage stage)
 	{
 		stageManager = springContext.getBean(StageManager.class, stage);
+		stage.initStyle(StageStyle.UNDECORATED);
 		displayInitialScene();
 	}
 
 	@Override
-	public void stop()
+	public
+	void stop()
 	{
 		springContext.close();
 	}
@@ -49,19 +52,19 @@ class TodoApplication
 	 * Scene to be displayed on startup. Example: Functional tests on main
 	 * window.
 	 */
-	protected void displayInitialScene() {
+	protected
+	void displayInitialScene()
+	{
+
 		stageManager.switchScene(FxmlViewEnum.LOGIN);
 	}
 
-
-	private ConfigurableApplicationContext springBootApplicationContext() {
+	private
+	ConfigurableApplicationContext springBootApplicationContext()
+	{
 		SpringApplicationBuilder builder = new SpringApplicationBuilder(TodoApplication.class);
 		String[] args = getParameters().getRaw().toArray(new String[0]);
 		return builder.run(args);
 	}
-
-
-
-
 }
 
