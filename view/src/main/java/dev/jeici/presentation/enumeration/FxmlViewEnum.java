@@ -37,22 +37,9 @@ enum FxmlViewEnum
 				return "/fxml/Login.fxml";
 			}
 		},
-	LOGIN_CUSTOM
-		{
-			@Override
-			public
-			String getTitle()
-			{
-				return getStringFromResourceBundle("login.title");
-			}
 
-			@Override
-			public
-			String getFxmlFile()
-			{
-				return "/fxml/Login.fxml";
-			}
-		};
+
+		;
 
 	public abstract
 	String getTitle();

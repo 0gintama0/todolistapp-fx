@@ -55,7 +55,6 @@ class TodoApplication
 	protected
 	void displayInitialScene()
 	{
-
 		stageManager.switchScene(FxmlViewEnum.LOGIN);
 	}
 
